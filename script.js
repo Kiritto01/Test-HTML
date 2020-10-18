@@ -1,4 +1,9 @@
-(function(){
+//let name =  prompt("Podaj imię i nazwisko:")
+//while (name.length == 0) {
+  //alert("Podaj to wiem że je masz");
+  //name=prompt("Podaj imię i nazwisko:");
+//}
+  (function(){
   function buildQuiz(){
     const output = [];
     
@@ -24,7 +29,8 @@
     );
     quizContainer.innerHTML = output.join('');
   }
-  
+
+
   function showResults(){
     const answerContainers = quizContainer.querySelectorAll('.answers');
     let numCorrect = 0;
@@ -41,8 +47,8 @@
       }
     });
     let percent = ((numCorrect/myQuestions.length) * 100).toFixed(2);
-    resultsContainer.innerHTML = `${numCorrect} z ${myQuestions.length} punktów / ${percent}%`;
-    console.log(`${numCorrect} z ${myQuestions.length} punktów / ${percent}%`)
+    resultsContainer.innerHTML = `${name}, zdobyłeś ${numCorrect} z ${myQuestions.length} punktów / ${percent}%`;
+    console.log(`${name}, zdobyłeś ${numCorrect} z ${myQuestions.length} punktów / ${percent}%`)
   }
 
   function showSlide(n) {
@@ -103,7 +109,7 @@
       correctAnswer: "B"
     },
     {
-      question: "Co oznacza znacznik &TITLE&gt ?",
+      question: "Co oznacza znacznik &ltTITLE&gt ?",
       answers: {
         A: "Zmienia nazwe zakładki",
         B: "Wyświetla tekst na stronie",
@@ -119,7 +125,7 @@
         A: "Dzięki niemu możemy używać komentarzy",
         B: "Podkreśla słowo",
         C: "Szczegółowo opisuje zawartość dokumentu",
-        D: "Wyruwnuję tekst do prawej strony"
+        D: "Wyrównuję tekst do prawej strony"
       },
       correctAnswer: "C"
       
@@ -131,7 +137,7 @@
         A: "Strona się odwraca",
         B: "Powiększa wszytkie znaczniki na stronie",
         C: "Przechowuje adres IP serwera",
-        D: "Pogrubia teks"
+        D: "Pogrubia tekst"
       },
       correctAnswer: "D"
       
@@ -174,14 +180,26 @@
     },
     {
 
-      question: "Co oznacza znacznik &ltBODY&gt ?",
+      question: "Co oznacza znacznik &lt!-- tutaj będzie galeria --&gt ?",
       answers: {
-        A: "Strona zaczyna tańczyć",
-        B: "Przechowuje znaczniki i teks strony",
-        C: "Przechowuje adres IP serwera",
+        A: "Umożliwia wstawianie komenarzy",
+        B: "Przechowuje adres IP serwera",
+        C: "Przechowuje znaczniki i tekst strony",
         D: "Nie istnieje taki"
       },
-      correctAnswer: "d"
+      correctAnswer: "A"
+      
+    },
+    {
+
+      question: "Co oznacza znacznik &ltBODY&gt ?",
+      answers: {
+        A: "Obraca stronę o 90 stopni",
+        B: "Przechowuje znaczniki i tekst strony",
+        C: "Przechowuje informacje wprowadzone przez użytkownika",
+        D: "Nie istnieje taki"
+      },
+      correctAnswer: "B"
       
     },
   ];
