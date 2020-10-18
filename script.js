@@ -1,8 +1,8 @@
-//let name =  prompt("Podaj imię i nazwisko:")
-//while (name.length == 0) {
-  //alert("Podaj to wiem że je masz");
-  //name=prompt("Podaj imię i nazwisko:");
-//}
+let name =  prompt("Podaj imię i nazwisko:")
+while (name.length == 0) {
+  alert("Podaj to wiem że je masz");
+  name=prompt("Podaj imię i nazwisko:");
+ }
   (function(){
   function buildQuiz(){
     const output = [];
